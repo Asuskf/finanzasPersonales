@@ -1,0 +1,27 @@
+DAX Calendario = ADDCOLUMNS (
+CALENDAR (DATE((2018),(1),(1)), DATE((2019),(12),(31))),
+"Año", YEAR ( [Date] ),
+"AñoMes", FORMAT ( [Date], "YYYY/mmm" ),
+"Mes", FORMAT ( [Date], "MM" ),
+"NombreMes", FORMAT ( [Date], "mmmm" ),
+"NombreMesCorto", FORMAT ( [Date], "mmm" )
+)
+
+
+
+
+
+
+
+
+// ---- USAR ESTE OTRO SI NO FUNCIONA CON ANTERIOR ---- //
+
+
+DAX Calendario = ADDCOLUMNS (
+CALENDAR (DATE((2018);(1);(1)); DATE((2019);(12);(31)));
+"Año"; YEAR ( [Date] );
+"AñoMes"; FORMAT ( [Date]; "YYYY/NM" );
+"Mes"; FORMAT ( [Date]; "MM" );
+"NombreMes"; FORMAT ( [Date]; "mmmm" );
+"NombreMesCorto"; FORMAT ( [Date]; "mmm" )
+)
